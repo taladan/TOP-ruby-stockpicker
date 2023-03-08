@@ -6,10 +6,10 @@ stocks2 = [534, 4, 8, 1, 254, 82, 365]
 def stock_picker(stocks)
   sorted_stocks = stocks.sort.uniq
   lows = sorted_stocks.slice(0..sorted_stocks.length / 2)
+  # Don't want to deal with an array in reverse
   highs = sorted_stocks.slice(sorted_stocks.length / 2..-1).reverse
 
   current_max = 0
-  # current_high = 0
   highs.each do |high|
     lows.each do |low|
       high_index = stocks.find_index(high)
