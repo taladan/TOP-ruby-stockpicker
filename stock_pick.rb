@@ -9,7 +9,7 @@ def stock_picker(stocks)
   highs = sorted_stocks.slice(sorted_stocks.length / 2..-1).reverse
 
   current_max = 0
-  current_high = 0
+  # current_high = 0
   highs.each do |high|
     lows.each do |low|
       high_index = stocks.find_index(high)
